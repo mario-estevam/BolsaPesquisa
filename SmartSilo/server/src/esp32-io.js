@@ -122,7 +122,7 @@ class Esp32IO {
         } else strPwmValue = strPwmValue + x[i] 
     }
     console.log(strPwmValue)
-
+    //up
   this.firmata.sysexCommand([PWM_OUTPUT, pin, PWM_CHANNEL, pwmFreq, pwmResolution,strPwmValue]);
 
   }
