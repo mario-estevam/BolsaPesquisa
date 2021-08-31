@@ -154,7 +154,6 @@ export default {
   data() {
     return {
       pins: ['0','0','0','0','0','0','0','0','0'],
-      selectedControlMode: 'Open loop',
       setpointTemp: null,
       disableControlModeSelection: false,
       currentOpenLoopVoltage: null,

@@ -169,9 +169,6 @@ module.exports = class Board {
    * @param {'PID' | 'ON/OFF' | 'Open loop'} mode the control mode for the output 
    */
 
-  updateMode(mode){
-    console.log(mode)
-  }
 
   startControlling(mode) {
     this.board.pinMode(18, this.board.firmata.MODES.PWM);

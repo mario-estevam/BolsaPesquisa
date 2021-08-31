@@ -119,7 +119,6 @@ class Esp32IO {
     //adiciona parte dinâmica à parte fixa (após)
     for(let i = 0; i < x.length; i++){
         dataFwHw.push(x[i])
-        console.log(x) 
     }
 
   this.firmata.sysexCommand(dataFwHw)
