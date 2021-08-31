@@ -37,7 +37,7 @@
           <option>PID</option>
           <option>ON/OFF</option>
         </select>
-        
+         <button :disabled="disableControlModeSelection" @click="sendMode">Confirm Mode</button>
       </div>
       <div class="radioButtonDiv" v-show="selectedControlMode == 'Open loop'">
         <input
@@ -240,6 +240,11 @@ export default {
         
         websocketBus.$emit('update-pins', pinsToSend);
         sweetAlert.fire('success', 'Pins changed successfully');
+    },
+    sendMode(){
+      const modeToSend = this.selectedControlMode;
+      websocketBus.$emit('update-mode', modeToSend);
+      sweetAlert.fire('sucesso');
     },
     updateSetpoint(newSetpoint) {
       this.setpointTemp = newSetpoint;

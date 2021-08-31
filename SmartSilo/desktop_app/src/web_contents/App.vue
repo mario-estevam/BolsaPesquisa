@@ -62,6 +62,7 @@ export default {
     this.addSocketListener('new-data');
     this.addSocketListener('chart-ready');
 
+    this.addSocketEmitter('update-mode');
     this.addSocketEmitter('start-experiment');
     this.addSocketEmitter('stop-experiment');
     this.addSocketEmitter('update-server-open-loop-voltage');

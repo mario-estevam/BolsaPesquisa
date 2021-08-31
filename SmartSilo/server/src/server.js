@@ -35,7 +35,6 @@ const io = socketIO(server);
 board.onReady(() => {
   console.log('✔ board ready');
   board.startThermsReading();
-  board.startControlling('Open loop');
   io.on('connection', (socket) => {
     console.log(`> ${socket.id} connected`);
     startSending(socket);
@@ -44,6 +43,7 @@ board.onReady(() => {
 });
 
 function startSocketListening(socket) {
+
 
   socket.on('start-experiment', (controlMode) => {
     startExperiment(controlMode);
@@ -68,6 +68,11 @@ function startSocketListening(socket) {
   socket.on('update-pins', (pins) => {
     board.updatePins(pins);
   });
+
+  socket.on('update-mode', (mode) => {
+    board.startControlling(mode);
+  });
+
 
   socket.on('update-server-pid-consts', (pidConsts) => {
     board.updatePidConsts(pidConsts);

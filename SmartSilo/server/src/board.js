@@ -168,6 +168,11 @@ module.exports = class Board {
    * Start controlling the output of the board with a control mode
    * @param {'PID' | 'ON/OFF' | 'Open loop'} mode the control mode for the output 
    */
+
+  updateMode(mode){
+    console.log(mode)
+  }
+
   startControlling(mode) {
     this.board.pinMode(18, this.board.firmata.MODES.PWM);
     switch (mode) {
@@ -176,34 +181,55 @@ module.exports = class Board {
         this.pidTimeLapse = setInterval(() => this.controlViaPid(), 100);
         break;
       case 'ON/OFF':
+        console.log("case ON/OFF")
         this.isControlling = true;
         this.onOffTimeLapse = setInterval(() => this.controlViaOnOff(), 100);
         break;
       case 'Open loop':
-        console.log(this.openLoopVoltage)
+        this.isControlling = true;
+        console.log("entrou open loop")
         this.output = this.scaleOutput(this.openLoopVoltage, {
           from: [0, 3.3], // modificado [0, 5]
           to: [0, 1023], // modificado [0, 255]
         });
         this.openLoopTimeLapse = setInterval(() => {
-          this.board.pwmWrite(19, 0, 25, 10, this.output);// modificado [digitalWrite - analogWrite] // 18 seria para validar, onde seria o pino de saida (fixo) // esse this.output n ta me passando um valor
+          this.board.pwmWrite(19 , 0, 25, 10, this.output);// modificado [digitalWrite - analogWrite] // 18 seria para validar, onde seria o pino de saida (fixo) // esse this.output n ta me passando um valor
        
         }, 100);
         console.log(this.output)
+        
         break;
     }
   }
+
+/*
+  controlViaOpenloop(){
+    console.log("entrou open loop")
+    this.output = this.scaleOutput(this.openLoopVoltage, {
+      from: [0, 3.3], // modificado [0, 5]
+      to: [0, 1023], // modificado [0, 255]
+    });
+    this.openLoopTimeLapse = setInterval(() => {
+      this.board.pwmWrite(19 , 0, 25, 10, this.output);// modificado [digitalWrite - analogWrite] // 18 seria para validar, onde seria o pino de saida (fixo) // esse this.output n ta me passando um valor
+   
+    }, 100);
+    console.log(this.output)
+  }
+*/
+
   /**
    * Control the output via ON/OFF
    */
   controlViaOnOff() {
-    this.output = this.getTemp() < this.setpoint ? 255 : 0;
-    this.board.pwmWrite(18, this.output);
+    console.log("entrou ONOFF")
+    this.output = this.getTemp() < this.setpoint ? 1023 : 0;
+    this.board.pwmWrite(19 , 0, 25, 10, this.output);
   }
   /**
    * Control the output via proportional integral derivative (PID)
    */
   controlViaPid() {
+    console.log("PID")
     const { pb, ti, td } = this.pidConsts;
     const KP = 1 / (pb / 100); // proportionalBand
     const KI = KP / ti; // integrativeTime
@@ -220,11 +246,11 @@ module.exports = class Board {
     if (this.output < 2 && this.setpoint > 30) {
       this.output *= 1.05;
     }
-    if (this.output > 255) {
-      this.output = 255;
+    if (this.output > 1023) {
+      this.output = 1023;
     } else if (this.output < 0) {
       this.output = 0;
     }
-    this.board.pwmWrite(18, this.output);
+    this.board.pwmWrite(19, 0, 25, 10, this.output);
   }
 };

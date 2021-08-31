@@ -112,20 +112,19 @@ class Esp32IO {
   }
 
   pwmWrite(pin, PWM_CHANNEL, pwmFreq, pwmResolution, pwmValue){
-
-    let strPwmValue = "";
+    let dataFwHw;
+    //vetor fixo
+    dataFwHw = [PWM_OUTPUT, pin, PWM_CHANNEL, pwmFreq, pwmResolution]
     let x = pwmValue > 255 ? slicePwmValue(pwmValue) : [pwmValue];
-    console.log(x)
-    for( let i = 0; i<x.length; i++){
-        if(i != (x.length)-1){
-            strPwmValue = strPwmValue + x[i] + ',';
-        } else strPwmValue = strPwmValue + x[i] 
+    //adiciona parte dinâmica à parte fixa (após)
+    for(let i = 0; i < x.length; i++){
+        dataFwHw.push(x[i])
+        console.log(x) 
     }
-    console.log(strPwmValue)
-    //up
-  this.firmata.sysexCommand([PWM_OUTPUT, pin, PWM_CHANNEL, pwmFreq, pwmResolution,strPwmValue]);
 
-  }
+  this.firmata.sysexCommand(dataFwHw)
+
+}
 
 }
 /**
