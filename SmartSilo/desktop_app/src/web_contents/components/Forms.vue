@@ -153,7 +153,7 @@ const baseUrl = config.base_url;
 export default {
   data() {
     return {
-      pins: ['0','0','0','0','0','0','0','0','0'],
+      pins: ['25','32','33','34','35','0','0','0','0'],
       setpointTemp: null,
       disableControlModeSelection: false,
       currentOpenLoopVoltage: null,
