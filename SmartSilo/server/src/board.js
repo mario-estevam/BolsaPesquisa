@@ -187,35 +187,22 @@ module.exports = class Board {
         break;
       case 'Open loop':
         this.isControlling = true;
-        console.log("entrou open loop")
         this.output = this.scaleOutput(this.openLoopVoltage, {
           from: [0, 3.3], // modificado [0, 5]
           to: [0, 1023], // modificado [0, 255]
         });
-        this.openLoopTimeLapse = setInterval(() => {
-          this.board.pwmWrite(19 , 0, 25, 10, this.output);// modificado [digitalWrite - analogWrite] // 18 seria para validar, onde seria o pino de saida (fixo) // esse this.output n ta me passando um valor
-       
-        }, 100);
+        this.openLoopTimeLapse = setInterval(() =>  this.controlViaOpenloop(), 100);
         console.log(this.output)
-        
         break;
     }
   }
-//up
-/*
+
+
   controlViaOpenloop(){
     console.log("entrou open loop")
-    this.output = this.scaleOutput(this.openLoopVoltage, {
-      from: [0, 3.3], // modificado [0, 5]
-      to: [0, 1023], // modificado [0, 255]
-    });
-    this.openLoopTimeLapse = setInterval(() => {
-      this.board.pwmWrite(19 , 0, 25, 10, this.output);// modificado [digitalWrite - analogWrite] // 18 seria para validar, onde seria o pino de saida (fixo) // esse this.output n ta me passando um valor
-   
-    }, 100);
-    console.log(this.output)
+    this.board.pwmWrite(19 , 0, 25, 10, this.output); // modificado [digitalWrite - analogWrite] // 18 seria para validar, onde seria o pino de saida (fixo) // esse this.output n ta me passando um valor
   }
-*/
+
 
   /**
    * Control the output via ON/OFF
