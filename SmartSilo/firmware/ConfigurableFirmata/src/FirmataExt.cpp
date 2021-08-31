@@ -116,87 +116,15 @@ boolean FirmataExt::handleSysex(byte command, byte argc, byte* argv)
       byte pwmChannel = argv[1];
       byte pwmFreq = argv[2];
       byte pwmResolution = argv[3];
-     
-      byte pw = (argv[4]);
-      string s(pw, sizeof(pw));
       unsigned short pwmValue = 0;
-  
-  //teste 
-  /*
-      string text = argv[4];
-      vector<int> numbers;
-      int num;
 
-      size_t pos = 0;
-      while ((pos = text.find(',')) != string::npos) {
-          numbers.push_back(atoi(text.substr(0, pos)));
-          text.erase(0, pos + 1);
-      }
-      numbers.push_back(atoi(text.substr(0, pos)));
-      int aux;
-        for (int i =0; i< numbers.size(); i++){
-                aux += numbers[i];  
-              }
-      pwmValue = aux;
-*/
-        /*
-        string listArgs;
-        vector<string> v;
-        vector<string> args;
-        listArgs = atoi(s);
-        auto f1 = listArgs.find(",");
-      
-        if (f1 != string::npos) {
-          v.push_back(listArgs.substr(0,f1));
-        }
-        
-        size_t f;
-        while (f1 != string::npos) {
-          f = listArgs.find(",", f1+1);
-          v.push_back(listArgs.substr(f1+1,f-f1-1));
-          f1 = f;
-        }
-       
-         for (int i = 0; i < v.size(); i++){
-            atoi(v[i]);
-         }// Convert string to float; stoi convert string to int
-
-        int aux;
-
-      for (int i =0; i<v.size(); i++){
-              aux += v[i];  
-            }
-
-        pwmValue = aux;
-
-*/
-
-/*
       for (byte i = 4; i < argc; i++) {
           pwmValue += argv[i]; //from buffer[4]...
       }
-*/
 
-      
-      //Serial.println(pwmValue);
-        if (argc > 5) {
-        //pinMode(19, OUTPUT);
-        digitalWrite(19, LOW);
-        digitalWrite(18, HIGH);
-      } 
-      if(argc = 5) {
-        digitalWrite(19, HIGH);
-        digitalWrite(18, HIGH);
-      }
-      
-
-
-
-
-
-      //ledcSetup(pwmChannel, pwmFreq*1000, pwmResolution);
-      //ledcAttachPin(pwmPin, pwmChannel);
-      //ledcWrite(pwmChannel, pwmValue);
+      ledcSetup(pwmChannel, pwmFreq*1000, pwmResolution);
+      ledcAttachPin(pwmPin, pwmChannel);
+      ledcWrite(pwmChannel, pwmValue);
       Firmata.sendSysex(command, argc, argv);
     }
     case PIN_STATE_QUERY:

@@ -201,7 +201,7 @@ module.exports = class Board {
         break;
     }
   }
-
+//up
 /*
   controlViaOpenloop(){
     console.log("entrou open loop")
