@@ -32,7 +32,7 @@ by: Yure Matias
 
 # Diagrama de Funcionamento: 
 
-<center> <a href="https://imgur.com/0jKsQM9"><img src="https://i.imgur.com/0jKsQM9.pn" title="source: imgur.com" /></a> </center>
+<center> <a href="https://imgur.com/0jKsQM9"><img src="https://i.imgur.com/0jKsQM9.png" title="source: imgur.com" /></a> </center>
 
 
 
