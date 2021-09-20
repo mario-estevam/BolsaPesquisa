@@ -56,5 +56,12 @@ Com tudo configurado, o arquivo main.ino localizado na pasta Firmware deverá se
 Após tudo configurado e com as dependências baixadas, pela sua IDE vc acessa a pasta de server a pasta src dentro de server e coloca no terminal da sua IDE o comando "node server.js" , este comando só será executado se o arquivo package.json estiver configurado com o ip da sua maquina, apóes esse comando é necessário entrar na pasta desktopApp e colocar o comando "yarn start" no terminal, este comando fará com que a interface do electron inicie.
 
 
+# Bancada PP32  e Esp32 
 
+
+<center> <a href="https://imgur.com/RfWL2FD"><img src="https://i.imgur.com/RfWL2FD.jpg" title="source: imgur.com" /></a> </center> <br/>
+
+<br/>
+
+<center> <a href="https://imgur.com/qZZpJVx"><img src="https://i.imgur.com/qZZpJVx.jpg" title="source: imgur.com" /></a> </center> <br/>
 
