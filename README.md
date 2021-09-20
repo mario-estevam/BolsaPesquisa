@@ -52,6 +52,7 @@ O ip da sua máquina pode ser obtido pelo ipconfig do prompt do windows.
 Para quaisquer outras dúvidas sobre o projeto, o bolsista anterior Yure Matias preparou um site que explica detalhadamente sobre alguns frameworks utilizados e como executar alguns testes, link do site: https://smartsilo.netlify.app/html/dashboard.html#Introdução  <br/>
 
 Com tudo configurado, o arquivo main.ino localizado na pasta Firmware deverá ser carregado para a placa (Esp32) e para que isso possa ser feito é necessário que a biblioteca configurable firmata, também encontrada na pasta firmware, esteja alocada em libraries da IDE Arduino. <br/>
+Após tudo configurado e com as dependências baixadas, pela sua IDE vc acessa a pasta de server a pasta src dentro de server e coloca no terminal da sua IDE o comando "node server.js" , este comando só será executado se o arquivo package.json estiver configurado com o ip da sua maquina, apóes esse comando é necessário entrar na pasta desktopApp e colocar o comando "yarn start" no terminal, este comando fará com que a interface do electron inicie.
 
 
 
