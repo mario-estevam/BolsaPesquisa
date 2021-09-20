@@ -27,4 +27,4 @@ Durante a pesquisa foram feitos uso de alguns materiais que serão listados aqui
 
 #Plataforma :
 
-https://imgur.com/TWrZbz4
+<blockquote class="imgur-embed-pub" lang="en" data-id="TWrZbz4"><a href="https://imgur.com/TWrZbz4">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
