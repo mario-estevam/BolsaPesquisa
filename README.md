@@ -38,7 +38,8 @@ by: Yure Matias
 # Pendencias para trabalhos futuros:
 
 - correção do bug de escolha de modo (PID, ON/OFF, Open loop), este bug consiste em que uma vez selecionado um modo a escolha de outro só pode ser feita reiniciando a aplicação.
-- Implementar a interface web com todas as funcionalidades
+- Implementar a interface web com todas as funcionalidades.
+- Implementar o controle pela massa e umidade.
 
 # Como clonar o repositório e dar continuidade ao projeto
 
