@@ -49,6 +49,10 @@ Com as dependências baixadas é necessário configurar o servidor para sua máq
 <center> <a href="https://imgur.com/y2hEjv0"><img src="https://i.imgur.com/y2hEjv0.png" title="source: imgur.com" /></a> </center> <br/>
 O ip da sua máquina pode ser obtido pelo ipconfig do prompt do windows.
 
-Para quaisquer outras dúvidas sobre o projeto, o bolsista anterior Yure Matias preparou um site que explica detalhadamente sobre alguns frameworks utilizados e como executar alguns testes, link do site: https://smartsilo.netlify.app/html/dashboard.html#Introdução 
+Para quaisquer outras dúvidas sobre o projeto, o bolsista anterior Yure Matias preparou um site que explica detalhadamente sobre alguns frameworks utilizados e como executar alguns testes, link do site: https://smartsilo.netlify.app/html/dashboard.html#Introdução  <br/>
+
+Com tudo configurado, o arquivo main.ino localizado na pasta Firmware deverá ser carregado para a placa (Esp32) e para que isso possa ser feito é necessário que a biblioteca configurable firmata, também encontrada na pasta firmware, esteja alocada em libraries da IDE Arduino. <br/>
+
+
 
 
