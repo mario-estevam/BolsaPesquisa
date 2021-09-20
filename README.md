@@ -41,3 +41,14 @@ by: Yure Matias
 - Implementar a interface web com todas as funcionalidades
 
 # Como clonar o repositório e dar continuidade ao projeto
+
+A clonagem pode ser feita via link ou donwload do arquivo .zip <br/>
+Com o projeto no computador, é necessário entrar em cada uma das pastas (Desktop app e Server) e dar um yarn para que as depedências sejam baixadas. <br/>
+Com as dependências baixadas é necessário configurar o servidor para sua máquina local, esse processo é feito no arquivo package.json dentro da pasta DesktopApp <br/>
+
+<center> <a href="https://imgur.com/y2hEjv0"><img src="https://i.imgur.com/y2hEjv0.png" title="source: imgur.com" /></a> </center> <br/>
+O ip da sua máquina pode ser obtido pelo ipconfig do prompt do windows.
+
+Para quaisquer outras dúvidas sobre o projeto, o bolsista anterior Yure Matias preparou um site que explica detalhadamente sobre alguns frameworks utilizados e como executar alguns testes, link do site: https://smartsilo.netlify.app/html/dashboard.html#Introdução 
+
+
