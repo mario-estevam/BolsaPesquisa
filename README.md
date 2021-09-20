@@ -26,4 +26,6 @@ Durante a pesquisa foram feitos uso de alguns materiais que serão listados aqui
 - Node-pid-controller
 
 #Plataforma :
-<a href="https://imgur.com/TWrZbz4"/>
+
+<center> <a href="https://imgur.com/TWrZbz4"><img src="https://i.imgur.com/TWrZbz4.gif" title="source: imgur.com" /></a> </center>
+
