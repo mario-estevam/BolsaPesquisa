@@ -8,7 +8,7 @@ além do prejuízo que pode ser transmitido ao produtor quando se tem um mal man
 A partir dessa problemática a presente pesquisa tem como objetivo trazer inovação e automação no processo de armazenamento de grãos, em um contexto Iot, ajudar a otimizar e diminuir a perda de grãos nos silos, 
 utilizando como hardware o esp32 e softwares que a tecnologia atual nos oferece.
 
-#Materiais e Metódos: 
+# Materiais e Metódos: 
 Durante a pesquisa foram feitos uso de alguns materiais que serão listados aqui:
 - Arduino
 - Bancada PP32 de Secagem de Grãos
@@ -25,7 +25,14 @@ Durante a pesquisa foram feitos uso de alguns materiais que serão listados aqui
 - Firmata.js
 - Node-pid-controller
 
-#Plataforma :
+# Plataforma :
 
 <center> <a href="https://imgur.com/TWrZbz4"><img src="https://i.imgur.com/TWrZbz4.gif" title="source: imgur.com" /></a> </center>
+by: Yure Matias
+
+# Diagrama de Funcionamento: 
+
+<center> <a href="https://imgur.com/0jKsQM9"><img src="https://i.imgur.com/0jKsQM9.pn" title="source: imgur.com" /></a> </center>
+
+
 
