@@ -1,6 +1,6 @@
 # Projeto SmartSilo
 
-Resumo do projeto: 
+# Resumo do projeto: 
 Na agroindústria o processo de armazenamento de grãos é um dos mais importantes, 
 afinal se o armazenamento para feito de forma errada pode resultar em grandes danos aos grãos, 
 tendo em vista que todo grão é um ser vivo e requer de cuidados para não ser estragado e perder sua qualidade, 
