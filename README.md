@@ -27,12 +27,11 @@ Durante a pesquisa foram feitos uso de alguns materiais que serão listados aqui
 
 # Plataforma :
 
-<center> <a href="https://imgur.com/TWrZbz4"><img src="https://i.imgur.com/TWrZbz4.gif" title="source: imgur.com" /></a> </center>
+<center> <a href="https://imgur.com/TWrZbz4"><img src="https://i.imgur.com/TWrZbz4.gif" title="source: imgur.com" /></a> </center> <br/>
 by: Yure Matias
 
 # Diagrama de Funcionamento: 
 
-<center> <a href="https://imgur.com/0jKsQM9"><img src="https://i.imgur.com/0jKsQM9.png" title="source: imgur.com" /></a> </center>
-
-
+<center> <a href="https://imgur.com/0jKsQM9"><img src="https://i.imgur.com/0jKsQM9.png" title="source: imgur.com" /></a> </center> <br/>
+by: Yure Matias
 
